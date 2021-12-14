@@ -1,0 +1,69 @@
+syntax="proto3";
+package todoPackage;
+
+service Todo{
+	
+   rpc createTodo(TodoItem) returns (TodoItem);
+   rpc readTodos(TodoItems) returns (TodoItems);
+   rpc createadd(add) returns (adds);
+   rpc multiplication(muliplication) returns (multi);
+   rpc soustraction(soustraction) returns (sous);
+   rpc removeuser(UserItem) returns (UserItems);
+   rpc createUser(UserItem) returns (UserItem);
+   rpc addUser(UserItem) returns (UserItem);
+   rpc updateUser(UserItem) returns (UserItem);
+   rpc readadds(adds) returns (adds);
+   rpc readUsers(UserItems) returns (UserItems);
+
+
+}
+
+message noparams{}
+
+message TodoItem{
+	int32 id= 1;
+	string text=2;
+}
+
+message TodoItems{
+
+	repeated TodoItem items= 1;
+}
+
+
+message add{
+	int32 a = 1;
+	int32 b = 2;
+}
+
+message adds{	
+	int32 c = 1;
+}
+
+message muliplication{
+	int32 a = 1;
+	int32 b = 2;
+}
+
+message multi{
+	int32 c = 1;
+}
+
+message soustraction{
+	int32 a = 1;
+	int32 b = 2;
+}
+
+message sous{
+	int32 c = 1;
+}
+
+message UserItem{
+	int32 iduser= 1;
+	string nom= 2;
+	string prenom= 3;
+}
+message UserItems{
+
+	repeated UserItems items= 1;
+}
